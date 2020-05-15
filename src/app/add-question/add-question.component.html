@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Add Question Form</h1>
     <form #questionModel="ngForm" (ngSubmit)="onSubmit()" novalidate>
-      {{ questionForm | json }}
+      <!-- {{ questionForm | json }} -->
       <div class="form-group">
         <label for="module">Module</label>
         <input type="text" class="form-control" id="module" name="module" required [(ngModel)]="questionForm.module">
