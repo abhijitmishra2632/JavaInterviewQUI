@@ -4,7 +4,9 @@
       <!-- {{ questionForm | json }} -->
       <div class="form-group">
         <label for="module">Module</label>
-        <input type="text" class="form-control" id="module" name="module" required [(ngModel)]="questionForm.module">
+        <select type="text" class="form-control" name="module" required [(ngModel)]="questionForm.module">
+          <option *ngFor = "let mod of moduleList">{{ mod }}</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -24,7 +26,9 @@
 
       <div class="form-group">
         <label for="importance">Importance</label>
-        <input type="text" class="form-control" name="importance" required [(ngModel)]="questionForm.importance">
+        <select type="text" class="form-control" name="importance" required [(ngModel)]="questionForm.importance">
+          <option *ngFor = "let imp of importanceList">{{ imp }}</option>
+        </select>
       </div>
 
       <button type="submit" class="btn btn-success">Submit</button>

@@ -1,9 +1,8 @@
 export class Question {
-    constructor(
-	public module : string,
-	public topic : string,
-	public addq : string,
-	public askedIn : string,
-	public importance : string,
-	){}
+	public module : string;
+	public topic : string;
+	public addq : string;
+	public askedIn : string;
+	public importance : string;
+    constructor(){}
   }

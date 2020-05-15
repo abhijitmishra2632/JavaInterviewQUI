@@ -9,7 +9,9 @@ import { QuestionService } from '../question-service.service';
 })
 export class AddQuestionComponent implements OnInit {
   str:string;
-  questionForm = new Question("Java","Basics","What is Java","HCL","Low");
+  moduleList=["Java","Spring","Hibernate","DB","Testing","AdvancedJava","Career","Rest API","NoSQL","Algorithms","Angular","React","NodeJS","DevOps","tools"];
+  importanceList=["High","Medium","Low"];
+  questionForm = new Question();
   constructor(private questionService:QuestionService) { 
   }
 
