@@ -9,9 +9,12 @@ import { QuestionService } from '../question-service.service';
 })
 export class AddQuestionComponent implements OnInit {
   str:string;
-  moduleList=["Java","Spring","Hibernate","DB","Testing","AdvancedJava","Career","Rest API","NoSQL","Algorithms","Angular","React","NodeJS","DevOps","tools"];
+  subjectList=["Language","Framework","DB","Testing","Career","UI","DevOPs","Tools"];
+  displayPage:boolean=false;
+  moduleList = ["Java","Spring","Hibernate","DB","Testing","AdvancedJava","Career","Rest API","NoSQL","Algorithms","Angular","React","NodeJS","DevOps","tools"];
   importanceList=["High","Medium","Low"];
   questionForm = new Question();
+  
   constructor(private questionService:QuestionService) { 
   }
 

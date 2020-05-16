@@ -3,6 +3,16 @@
     <form #questionModel="ngForm" (ngSubmit)="onSubmit()" novalidate>
       <!-- {{ questionForm | json }} -->
       <div class="form-group">
+        <label for="selectedSubject">Pick the Subject</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" required name="selectedSubject" class="example-radio-group" [(ngModel)]="questionForm.selectedSubject">
+        <mat-radio-button class="example-radio-button" *ngFor="let subject of subjectList" [value]="subject">
+            {{ subject }}
+      </mat-radio-button>
+    </mat-radio-group>
+      </div>
+      <div>You will add Question on: {{ questionForm.selectedSubject }}</div>
+     <div *ngIf="displayPage">
+      <div class="form-group">
         <label for="module">Module</label>
         <select type="text" class="form-control" name="module" required [(ngModel)]="questionForm.module">
           <option *ngFor = "let mod of moduleList">{{ mod }}</option>
@@ -30,6 +40,9 @@
           <option *ngFor = "let imp of importanceList">{{ imp }}</option>
         </select>
       </div>
+
+     </div> 
+      
 
       <button type="submit" class="btn btn-success">Submit</button>
 
