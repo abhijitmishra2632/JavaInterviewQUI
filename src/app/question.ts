@@ -5,5 +5,6 @@ export class Question {
 	public addq : string;
 	public askedIn : string;
 	public importance : string;
+	public type : string;
     constructor(){}
   }

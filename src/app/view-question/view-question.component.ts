@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-question.component.css']
 })
 export class ViewQuestionComponent implements OnInit {
-
+  topic:string;
+  importance:string;
   constructor() { }
 
   ngOnInit() {
   }
+  onSubmit(){}
 
 }

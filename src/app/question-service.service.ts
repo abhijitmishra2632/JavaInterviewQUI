@@ -6,6 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class QuestionService {
   str:any;
+  selectedSubject:string;
   constructor(private httpClientModule:HttpClient) { }
   addQuestion(questionForm:any){
     this.httpClientModule.post('http://localhost:8090/question',questionForm ).subscribe(data=> this.str);
