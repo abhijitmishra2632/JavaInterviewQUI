@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from '../question-service.service';
+import { Question } from '../question';
 
 @Component({
   selector: 'app-view-question',
@@ -8,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class ViewQuestionComponent implements OnInit {
   topic:string;
   importance:string;
-  constructor() { }
+  questionList:Question[];
+  displayedColumns: string[] = ['module',"topic", 'addq', 'importance', 'type'];
+  constructor(private questionService:QuestionService) { 
+    this.questionList = this.questionService.getAllQuestions();
+  }
 
   ngOnInit() {
   }
-  onSubmit(){}
+  onSubmit(){
+    console.log('submited')
+  }
 
 }
